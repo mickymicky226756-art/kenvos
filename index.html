@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Kenvos Invest | Smart Agricultural Investment</title>
+
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2913/2913999.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    
+    <script>
+        // ============================================ //
+        // --- SOURCE PROTECTION (runs first, before anything else) --- //
+        // ============================================ //
+        // Blocks the most common ways casual users inspect page source.
+        // NOTE: this is defense-in-depth, not real protection — a
+        // determined visitor can always curl the URL or use dev-tools.
+        (function() {
+            try {
+                // Block right-click on the whole page
+                document.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+
+                // Block common "view source / save / print" keyboard shortcuts
+                document.addEventListener('keydown', function(e) {
+                    var k = e.key || '';
+                    var kc = e.keyCode || e.which || 0;
+                    var ctrl = e.ctrlKey || e.metaKey; // ctrl on PC, cmd on Mac
+                    if (ctrl) {
+                        // Ctrl+U (view source), Ctrl+S (save), Ctrl+P (print),
+                        // Ctrl+C (copy), Ctrl+X (cut), Ctrl+A (select all),
+                        // Ctrl+E (some browsers), Ctrl+F (find is fine to keep)
+                        if (k === 'u' || k === 'U' || kc === 85 ||
+                            k === 's' || k === 'S' || kc === 83 ||
+                            k === 'p' || k === 'P' || kc === 80 ||
+                            k === 'c' || k === 'C' || kc === 67 ||
+                            k === 'x' || k === 'X' || kc === 88 ||
+                            k === 'a' || k === 'A' || kc === 65) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            return false;
+                        }
+                    }
+                    // F12 (dev tools)
+                    if (kc === 123 || k === 'F12') {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        return false;
+                    }
+                    // Ctrl+Shift+I (dev tools), Ctrl+Shift+J (console),
+                    // Ctrl+Shift+C (inspect element)
+                    if (ctrl && e.shiftKey) {
+                        if (k === 'i' || k === 'I' || kc === 73 ||
+                            k === 'j' || k === 'J' || kc === 74 ||
+                            k === 'c' || k === 'C' || kc === 67) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            return false;
+                        }
+                    }
+                    return true;
+                }, true); // capture phase so it runs before page handlers
+
+                // Block text selection on the whole document
+                document.addEventListener('selectstart', function(e) {
+                    // Allow selection inside form fields (inputs/textareas)
+                    var t = e.target;
+                    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) {
+                        return true;
+                    }
+                    e.preventDefault();
+                    return false;
+                });
+
+                // Block drag (so users can't drag images / text out of the page)
+                document.addEventListener('dragstart', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+
+                // Block clipboard copy via keyboard / right-click ("Copy")
+                document.addEventListener('copy', function(e) {
+                    var t = e.target;
+                    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) {
+                        return true; // allow copy inside form fields
+                    }
+                    e.preventDefault();
+                    return false;
+                });
+            } catch (err) {
+                // never break the page if a handler throws
+                try { console.warn('source protection init failed:', err); } catch (e) {}
+            }
+        })();
+    </script>
+    <!-- Neon Postgres data layer (replaces the Firebase SDK; same db.ref() API) -->
+    <script src="/db-client.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
