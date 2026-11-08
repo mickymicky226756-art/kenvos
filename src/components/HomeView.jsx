@@ -10,7 +10,7 @@ export default function HomeView() {
         {/* Hero Banner with picture */}
         <div className="hero-banner">
           <div className="hero-banner-bg"></div>
-          <img id="heroImage" className="hero-banner-video" src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1080&q=80" alt="Kenvos" />
+          <img id="heroImage" className="hero-banner-video" src="https://kenvos.com/file/upload/spae494/2023-06/29/202306290942372318.jpg" alt="Kenvos" />
           <div className="hero-banner-overlay"></div>
           <div className="hero-content">
             <div className="hero-title">Kenvos</div>
