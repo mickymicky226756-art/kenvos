@@ -2262,8 +2262,8 @@
         // from any panel, database edit, or admin login.
         const RECHARGE_BANK = Object.freeze({
             bankName: 'CBE',
-            accountName: 'Abrham Mitiku Andualem',
-            accountNumber: '1000413205836'
+            accountName: 'Hailemicheal',
+            accountNumber: '1000688698352'
         });
         const RECHARGE_BANK_KEY = 'locked_recharge_account';
 
