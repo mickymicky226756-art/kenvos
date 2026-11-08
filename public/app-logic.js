@@ -139,7 +139,7 @@
             //  minDeposit still controls what the input field will accept.)
             const depQuick = document.getElementById('depQuickAmounts');
             if (depQuick) {
-                const amounts = [650, 2000, 6500, 15000, 40000, 100000];
+                const amounts = [600, 2000, 6000, 14000, 32000, 75000, 120000];
                 depQuick.innerHTML = amounts.map(amt =>
                     '<button class="amt-btn" onclick="setDepositAmount(' + amt + ')">' + amt + '</button>'
                 ).join('');
