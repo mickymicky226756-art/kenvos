@@ -3,7 +3,7 @@
         var DEFAULT_TG_LINKS = {
             channel: 'https://t.me/AgroChemChannel',
             group:   'https://t.me/AgroChemGroup',
-            service: 'https://t.me/AgroChemSupport'
+            service: 'https://t.me/Kenvos4'
         };
         var tgLinks = Object.assign({}, DEFAULT_TG_LINKS);
         var _tgLinksLoaded = false;
@@ -18,9 +18,9 @@
         // Declared with `var` and placed BEFORE Firebase init so any function
         // called early (e.g. error handlers, the auth flow) can read it.
         var appConfig = {
-            minDeposit: 650,
-            minWithdraw: 250,
-            registrationBonus: 110,
+            minDeposit: 600,
+            minWithdraw: 150,
+            registrationBonus: 150,
             withdrawalFee: 18
         };
 
