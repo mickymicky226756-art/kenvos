@@ -1,8 +1,8 @@
         // --- GLOBAL DEFAULTS (declared FIRST so they're always available,
         //     even if Firebase init fails further down) ---
         var DEFAULT_TG_LINKS = {
-            channel: 'https://t.me/AgroChemChannel',
-            group:   'https://t.me/AgroChemGroup',
+            channel: 'https://t.me/Kenvos45',
+            group:   'https://t.me/Kenvos3',
             service: 'https://t.me/Kenvos4'
         };
         var tgLinks = Object.assign({}, DEFAULT_TG_LINKS);
